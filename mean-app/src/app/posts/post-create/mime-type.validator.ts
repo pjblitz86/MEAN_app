@@ -1,11 +1,14 @@
 import { AbstractControl } from '@angular/forms';
-import { Observable, Observer } from 'rxjs';
+import { Observable, Observer, of } from 'rxjs';
 
 // ADVANCED STUFF - MIME FILE TYPE VALIDATOR FUNCTION
 
 export const mimeType = (
   control: AbstractControl
 ): Promise<{ [key: string]: any }> | Observable<{ [key: string]: any }> => {
+  if (typeof control.value === 'string') {
+    return of(null);
+  }
   const file = control.value as File;
   const fileReader = new FileReader();
   // creating and implementing custom observable
