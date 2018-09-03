@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const postsRoutes = require('./routes/posts');
 const mongoose = require('mongoose');
+const path = require('path');
 
 const app = express();
 
@@ -19,6 +20,9 @@ mongoose
 
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false}));
+
+// allow access to img files stored on backend/images
+app.use('/images', express.static(path.join('backend/images')));
 
 // CORS allow setup
 app.use((req, res, next) => {
