@@ -8,7 +8,5 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent {
   isLoading = false;
 
-  onLogin(form: NgForm) {
-    console.log(form.value);
-  }
+  onLogin(form: NgForm) {}
 }
