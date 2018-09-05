@@ -9,7 +9,7 @@
     "deprecation": {
       "severity": "warn"
     },
-    "eofline": true,
+    "eofline": false,
     "forin": true,
     "import-blacklist": [true, "rxjs/Rx"],
     "import-spacing": true,
