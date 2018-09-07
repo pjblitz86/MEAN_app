@@ -10,7 +10,9 @@ const app = express();
 
 mongoose
   .connect(
-    'mongodb+srv://pjblitz86:pjblitz86@cluster0-c1rev.mongodb.net/node-angular',
+    'mongodb+srv://pjblitz86:' +
+      process.env.MONGO_ATLAS_PW +
+      '@cluster0-c1rev.mongodb.net/node-angular',
     { useNewUrlParser: true }
   )
   .then(() => {
