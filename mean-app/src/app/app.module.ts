@@ -1,4 +1,3 @@
-import { AuthModule } from './auth/auth.module';
 import { PostsModule } from './posts/posts.module';
 import { AngularMaterialModule } from './angular-material.module';
 import { ErrorInterceptor } from './error-interceptor';
@@ -20,8 +19,7 @@ import { ErrorComponent } from './error/error.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AngularMaterialModule,
-    PostsModule,
-    AuthModule
+    PostsModule
   ],
   providers: [
     {

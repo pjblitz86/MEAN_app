@@ -1,3 +1,4 @@
+import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from './../angular-material.module';
@@ -7,6 +8,6 @@ import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent],
-  imports: [CommonModule, AngularMaterialModule, FormsModule]
+  imports: [CommonModule, AngularMaterialModule, FormsModule, AuthRoutingModule]
 })
 export class AuthModule {}
